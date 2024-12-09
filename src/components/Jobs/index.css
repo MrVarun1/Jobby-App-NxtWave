@@ -1,0 +1,146 @@
+.bg_container {
+  color: #ffffff;
+}
+
+.jobs_content {
+  flex-grow: 1;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 1%;
+}
+
+.loader-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile_filters_container {
+  padding: 2%;
+  width: 20%;
+}
+
+.profile_container {
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+.profile_success_container {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  background-image: url('https://assets.ccbp.in/frontend/react-js/profile-bg.png');
+  background-size: 100% 100%;
+}
+
+.dp_img {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.profile_heading {
+  color: #4f46e5;
+}
+
+.profile_para {
+  color: #475569;
+}
+
+.profile_failure_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter_container {
+  height: auto;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+.filter_options_container {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 1%;
+}
+
+.option_item {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+.jobs_search_content {
+  flex-grow: 1;
+  padding: 1%;
+}
+
+.search_container {
+  width: 25%;
+  height: 2rem;
+  border: 2px solid #64748b;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.search_input {
+  background-color: transparent;
+  border: none;
+  flex-grow: 1;
+  outline: none;
+  color: #f8fafcc5;
+}
+
+.search_btn {
+  box-shadow: none;
+  border: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  cursor: pointer;
+  background-color: #272727;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.search-icon {
+  color: #ffffff;
+  font-size: 1.3rem;
+}
+
+.jobs_failure_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.no_jobs_found_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.no_jobs_found_img {
+  width: 50%;
+}
+
+.jobs_list {
+  list-style: none;
+  max-height: 90vh;
+  width: 100%;
+  overflow-y: scroll;
+}
