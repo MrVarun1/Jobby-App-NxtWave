@@ -1,0 +1,81 @@
+.details_success_bg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.description_link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.font-size-2rem {
+  font-size: 2rem;
+}
+
+.website_link {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: #4f46e5;
+  text-decoration: none;
+}
+
+.skills_list {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.skill_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill_img {
+  width: 4rem;
+}
+
+.para_img_container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.width-45 {
+  width: 45%;
+}
+
+.life_at_company_img {
+  width: 30%;
+}
+
+.align-flex-start {
+  align-self: flex-start;
+}
+
+.similar_jobs_container {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.similar_job_item {
+  background-color: #272727;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px;
+  width: 30%;
+}
+
+.similar_address {
+  display: flex;
+  align-items: center;
+  width: 90%;
+}

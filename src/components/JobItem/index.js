@@ -34,9 +34,9 @@ export default function JobItem(props) {
         </div>
         <div className="address_package">
           <div className="address">
-            <IoLocationSharp className="icon_styles" />
+            <IoLocationSharp className="icon_styles font-size-1rem" />
             <p className="para_text">{location}</p>
-            <FaEnvelope className="icon_styles" />
+            <FaEnvelope className="icon_styles font-size-1rem" />
             <p className="para_text">{employmentType}</p>
           </div>
           <div className="package">
