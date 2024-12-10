@@ -20,7 +20,7 @@ const apiCallsConstants = {
 export default class JobItemDetails extends Component {
   state = {
     bodyRenderStatus: apiCallsConstants.initial,
-    jobDetails: null,
+    jobDetailsResponse: null,
     similarJobs: [],
   }
 
@@ -57,7 +57,7 @@ export default class JobItemDetails extends Component {
 
         this.setState({
           bodyRenderStatus: apiCallsConstants.success,
-          jobDetails: updatedJobDetails,
+          jobDetailsResponse: updatedJobDetails,
           similarJobs: updatedSimilarJobs,
         })
       } else {
@@ -142,7 +142,7 @@ export default class JobItemDetails extends Component {
     return (
       <div className="details_success_bg">
         {this.renderJobDetails()}
-        <h1 className="align-flex-start">Similat Jobs</h1>
+        <h1 className="align-flex-start">Similar Jobs</h1>
         <ul className="similar_jobs_container">
           {similarJobs.map(similarJob => this.renderSimilarJob(similarJob))}
         </ul>
@@ -151,7 +151,7 @@ export default class JobItemDetails extends Component {
   }
 
   renderJobDetails = () => {
-    const {jobDetails} = this.state
+    const {jobDetailsResponse} = this.state
     const {
       title,
       companyLogoUrl,
@@ -164,7 +164,7 @@ export default class JobItemDetails extends Component {
       location,
       packagePerAnnum,
       rating,
-    } = jobDetails
+    } = jobDetailsResponse
 
     const {description, imageUrl} = lifeAtCompany
 
@@ -244,7 +244,7 @@ export default class JobItemDetails extends Component {
       <li key={id} className="similar_job_item">
         <div className="title_logo_container">
           <img
-            alt="company logo"
+            alt="similar job company logo"
             className="company_logo_img"
             src={companyLogoUrl}
           />

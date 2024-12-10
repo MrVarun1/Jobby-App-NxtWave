@@ -1,13 +1,11 @@
+import {Link} from 'react-router-dom'
+
 import Header from '../Header'
 
 import './index.css'
 
 export default function Home(props) {
   const {history} = props
-
-  const onClickJobs = () => {
-    history.push('/jobs')
-  }
 
   return (
     <div className="bg_container">
@@ -20,9 +18,11 @@ export default function Home(props) {
             company reviews. Find the job that fits your abilities and
             potential.
           </p>
-          <button type="button" className="jobby_btn" onClick={onClickJobs}>
-            Find Jobs
-          </button>
+          <Link to="/jobs">
+            <button type="button" className="jobby_btn">
+              Find Jobs
+            </button>
+          </Link>
         </div>
       </div>
     </div>

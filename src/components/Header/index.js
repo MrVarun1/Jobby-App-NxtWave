@@ -21,14 +21,18 @@ export default withRouter(function Header(props) {
           />
         </Link>
       </div>
-      <div className="nav_links_container">
-        <Link className="link_styles" to="/">
-          Home
-        </Link>
-        <Link className="link_styles" to="/jobs">
-          Jobs
-        </Link>
-      </div>
+      <ul className="nav_links_container">
+        <li>
+          <Link className="link_styles" to="/">
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link className="link_styles" to="/jobs">
+            Jobs
+          </Link>
+        </li>
+      </ul>
       <div className="logout_button_container">
         <button type="button" className="jobby_btn" onClick={onClickLogout}>
           Logout

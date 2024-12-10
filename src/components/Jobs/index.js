@@ -55,7 +55,7 @@ const apiCallsConstants = {
 export default class Jobs extends Component {
   state = {
     profileStatus: apiCallsConstants.initial,
-    profileDetails: null,
+    profileResponse: null,
     jobsStatus: apiCallsConstants.initial,
     jobsList: [],
     searchInput: '',
@@ -82,15 +82,15 @@ export default class Jobs extends Component {
     const jsonResponse = await response.json()
 
     if (response.ok) {
-      const profileDetails = jsonResponse.profile_details
+      const profileResponse = jsonResponse.profile_details
       const updatedProfileDetails = {
-        name: profileDetails.name,
-        profileImageUrl: profileDetails.profile_image_url,
-        shortBio: profileDetails.short_bio,
+        name: profileResponse.name,
+        profileImageUrl: profileResponse.profile_image_url,
+        shortBio: profileResponse.short_bio,
       }
 
       this.setState({
-        profileDetails: updatedProfileDetails,
+        profileResponse: updatedProfileDetails,
         profileStatus: apiCallsConstants.success,
       })
     } else {
@@ -138,7 +138,7 @@ export default class Jobs extends Component {
   }
 
   renderProfile = () => {
-    const {profileStatus, profileDetails} = this.state
+    const {profileStatus, profileResponse} = this.state
 
     switch (profileStatus) {
       case apiCallsConstants.loading:
@@ -148,7 +148,7 @@ export default class Jobs extends Component {
           </div>
         )
       case apiCallsConstants.success:
-        const {name, profileImageUrl, shortBio} = profileDetails
+        const {name, profileImageUrl, shortBio} = profileResponse
         return (
           <div className="profile_success_container">
             <img alt="profile" src={profileImageUrl} className="dp_img" />
@@ -271,6 +271,7 @@ export default class Jobs extends Component {
         <button
           type="button"
           className="search_btn"
+          data-testid="searchButton"
           onClick={this.onSearchIconClick}
         >
           <BsSearch className="search-icon" />

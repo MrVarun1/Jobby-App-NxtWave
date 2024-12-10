@@ -23,7 +23,7 @@ export default function JobItem(props) {
       <Link to={`/jobs/${id}`} className="link">
         <div className="title_logo_container">
           <img
-            alt="company logo"
+            alt="job details company logo"
             className="company_logo_img"
             src={companyLogoUrl}
           />
