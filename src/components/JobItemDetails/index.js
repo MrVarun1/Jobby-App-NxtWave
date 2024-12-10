@@ -1,5 +1,4 @@
 import {Component} from 'react'
-import {Link} from 'react-router-dom'
 import Loader from 'react-loader-spinner'
 import Cookies from 'js-cookie'
 
@@ -157,7 +156,6 @@ export default class JobItemDetails extends Component {
       companyLogoUrl,
       companyWebsiteUrl,
       employmentType,
-      id,
       jobDescription,
       skills,
       lifeAtCompany,

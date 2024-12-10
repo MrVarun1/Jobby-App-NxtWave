@@ -147,7 +147,7 @@ export default class Jobs extends Component {
             <Loader type="ThreeDots" color="#ffffff" height="50" width="50" />
           </div>
         )
-      case apiCallsConstants.success:
+      case apiCallsConstants.success: {
         const {name, profileImageUrl, shortBio} = profileResponse
         return (
           <div className="profile_success_container">
@@ -156,6 +156,7 @@ export default class Jobs extends Component {
             <p className="profile_para">{shortBio}</p>
           </div>
         )
+      }
       case apiCallsConstants.failure:
         return (
           <div className="profile_failure_container">
@@ -189,13 +190,13 @@ export default class Jobs extends Component {
 
     const onChangeEmployment = () => {
       this.setState(prevState => {
-        const {employmentTypeFilter} = prevState
+        const prevEmploymentTypeFilter = prevState.employmentTypeFilter
 
-        const updatedEmploymentTypeFilter = employmentTypeFilter.includes(
+        const updatedEmploymentTypeFilter = prevEmploymentTypeFilter.includes(
           employmentTypeId,
         )
-          ? employmentTypeFilter.filter(id => id !== employmentTypeId)
-          : [...employmentTypeFilter, employmentTypeId]
+          ? prevEmploymentTypeFilter.filter(id => id !== employmentTypeId)
+          : [...prevEmploymentTypeFilter, employmentTypeId]
 
         return {employmentTypeFilter: updatedEmploymentTypeFilter}
       }, this.fetchJobsFun)

@@ -4,9 +4,7 @@ import Header from '../Header'
 
 import './index.css'
 
-export default function Home(props) {
-  const {history} = props
-
+export default function Home() {
   return (
     <div className="bg_container">
       <Header />
