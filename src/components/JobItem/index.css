@@ -1,16 +1,71 @@
 .job_item {
-  width: 80%;
+  width: 90%;
+  background-color: #272727;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 15px;
 }
 
 .link {
+  margin: 0px;
+  padding: 0px;
   text-decoration: none;
+  color: #f8fafc;
+  display: flex;
+  flex-direction: column;
+}
+
+.title_logo_container {
+  display: flex;
+  align-items: center;
+  padding: 0px;
 }
 
 .company_logo_img {
-  width: 100px;
-  height: 100px;
+  width: 5rem;
+  height: 5rem;
+  margin: 8px;
+}
+
+.title_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 0px;
+  margin-left: 2%;
+  height: 4.5rem;
+}
+
+.no_margin {
+  margin: 0px;
+}
+
+.address_package {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px;
+  padding: 10px;
+}
+
+.address {
+  display: flex;
+  align-items: center;
+  width: 30%;
+}
+
+.para_text {
+  margin: 0px;
 }
 
 .icon_styles {
   font-size: 1rem;
+  margin-left: 10%;
+  margin-right: 5%;
+}
+
+.hr {
+  width: 100%;
+  color: #7e858e;
 }

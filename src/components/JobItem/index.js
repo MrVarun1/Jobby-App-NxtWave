@@ -20,7 +20,7 @@ export default function JobItem(props) {
 
   return (
     <li className="job_item">
-      <Link to={`/job/${id}`} className="link">
+      <Link to={`/jobs/${id}`} className="link">
         <div className="title_logo_container">
           <img
             alt="company logo"
@@ -28,23 +28,23 @@ export default function JobItem(props) {
             src={companyLogoUrl}
           />
           <div className="title_container">
-            <h1 className="heading">{title}</h1>
-            <p className="para">{rating}</p>
+            <h1 className="heading  no_margin">{title}</h1>
+            <p className="para no_margin">{rating}</p>
           </div>
         </div>
         <div className="address_package">
           <div className="address">
             <IoLocationSharp className="icon_styles" />
-            <p>{location}</p>
+            <p className="para_text">{location}</p>
             <FaEnvelope className="icon_styles" />
-            <p>{employmentType}</p>
+            <p className="para_text">{employmentType}</p>
           </div>
           <div className="package">
-            <p>{packagePerAnnum}</p>
+            <p className="para_text">{packagePerAnnum}</p>
           </div>
         </div>
         <hr className="hr" />
-        <h1 className="heading">Description</h1>
+        <h1 className="heading no_margin">Description</h1>
         <p>{jobDescription}</p>
       </Link>
     </li>
